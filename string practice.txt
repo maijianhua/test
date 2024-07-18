@@ -1,0 +1,10 @@
+s = 'sadsfasdfa123'
+
+number = "".join(char for char in s if char.isnumeric() or char == ".")
+if number.find('.') != -1 and len(s.split('.')[1]) >2:
+ s = number.split('.')[0]+'.'+number.split('.')[1][:2]
+elif number.find('.') != -1 and len(s.split('.')[1]) == 1:
+ s = number.split('.')[0]+'.'+number.split('.')[1][:1]+'0'
+elif number.find('.') == -1
+ s = number+'.00'
+print(s)
